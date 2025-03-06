@@ -1,0 +1,22 @@
+<h1>NBA All Stars 2025 Rosters</h1>
+
+<h2>Eastern Conference</h2>
+
+<ol>
+    <% @nba_all_stars_eastern_conference.each_with_index do |nba_all_star, index| %>
+        <li><%= "Representing the Eastern Conference we have: #{nba_all_star} - #{@nba_positions[index]}" %></li>
+    <% end %>
+</ol>
+
+<h2>Western Conference</h2>
+
+<ol>
+    <% @nba_all_stars_western_conference.each_with_index do |nba_all_star, index| %>
+        <li><%= "Representing the Western Conference we have: #{nba_all_star} - #{@nba_positions[index]}" %></li>
+    <% end%>
+</ol>
+
+<h2>All Star Position Match Up</h2>
+<% if @nba_position_matchup.length > 0 %>
+    <h3><%= "Who will win when #{@nba_position_matchup[0]} goes head to head against his rival #{@nba_position_matchup[1]}???" %></h3>
+<% end %>
